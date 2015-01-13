@@ -13,11 +13,12 @@ public class EmployeeTest {
 		staff[1] = new Employee("Rick Olson", "Translator Ru - Eng", 40000, 2015, 12, 11);
 		staff[2] = new Employee("Ivan Burov", "Machine Operator", 45000, 2016, 11, 12);
 		
-		Manager[] managers = new Manager[10];
 	//	ERROR here ArrayStoreException
+		Manager[] managers = new Manager[10];
 		Employee[] staffManagers = managers;
 		staffManagers[0] = staff[1];
 	//	
+		
 		for (Employee e : staff) {
 			System.out.println("Name: " + e.getName() + "	Position: " + e.getPosition() + "	Salary: " + e.getSalary() + "	HireDate: " + e.getHireDate());
 		}
