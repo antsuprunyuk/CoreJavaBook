@@ -12,7 +12,7 @@ public class InnerClassTest {
 
 	public static void main(String[] args) {
 
-		TalkingClock clock = new TalkingClock(2_000, true);
+		TalkingClock clock = new TalkingClock(300_000, true);
 		clock.start();
 		
 		JOptionPane.showMessageDialog(null, "Quit program?");
@@ -37,6 +37,7 @@ class TalkingClock {
 		Timer t2 = new Timer(interval * 3, listener2);
 		t.start();
 		t2.start();
+		System.out.println("START");
 	}
 	
 	private class TimePrinter implements ActionListener {
