@@ -13,11 +13,13 @@ public class ButtonFrame extends JFrame{
 	public static void main(String[] args) {
 		JFrame frame = new ButtonFrame();
 		frame.setVisible(true);
-		frame.setResizable(false);
+		//frame.setResizable(false);
 	}
 	
 	public ButtonFrame() {
 		setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
+		BorderLayout bl = new BorderLayout();
+		setLayout(bl);
 		
 		//create buttons
 		JButton yellowButton = new JButton("Yellow");
@@ -32,7 +34,8 @@ public class ButtonFrame extends JFrame{
 		buttonPanel.add(redButton);
 		
 		//add panel to frame
-		add(buttonPanel);
+		add(buttonPanel, "East");
+		//pack();
 		
 		//create button actions
 		ColorAction yellowAction = new ColorAction(Color.YELLOW);
